@@ -28,6 +28,13 @@ NULL_STRING = "<NULL>"
 EMPTY_STRING = "<empty string>"
 
 CHANGE_ME_SECRET_KEY = "CHANGE_ME_TO_A_COMPLEX_RANDOM_SECRET"  # noqa: S105
+CHANGE_ME_SECRET_KEYS = [
+    '\x02\x01thisismyscretkey\x01\x02\\e\\y\\y\\h',  # version < 1.4.1
+    CHANGE_ME_SECRET_KEY,                            # version >= 1.4.1
+    'thisISaSECRET_1234',                            # deployment template
+    'YOUR_OWN_RANDOM_GENERATED_SECRET_KEY',          # documentation
+    'TEST_NON_DEV_SECRET'                            # docker compose
+]
 
 # UUID for the examples database
 EXAMPLES_DB_UUID = "a2dc77af-e654-49bb-b321-40f6b559a1ee"
